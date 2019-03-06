@@ -1,15 +1,13 @@
 import * as React from 'react';
-import * as styled from 'styled-components';
+import { useEffect } from 'react';
+import Table from './Table';
 
-console.log(styled);
+const UserTable: React.StatelessComponent<{}> = (props) => {
+  useEffect(() => {
+    // TODO request
+  }, []);
 
-class UserTable extends React.Component {
+  return <Table />
+};
 
-  render() {
-    return (
-        <div>sdfasdff</div>
-    )
-  }
-}
-
-export default UserTable
+export default UserTable;

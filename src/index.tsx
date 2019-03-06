@@ -1,11 +1,14 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import UserTable from './components/UserTable';
+
+import Root from './Root';
 import './index.css';
+import store from './store'
+
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-  <UserTable />,
+  <Root store={store} />,
   document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();
