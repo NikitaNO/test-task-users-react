@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Sed ut perspiciatis unde",
+    "description": "Porro ipsum minima nisi dolores voluptatem hic quidem nam.",
+    "score": 4.5
+  },
+  {
+    "id": 2,
+    "title": "Consectetur, adipisci velit",
+    "description": "Illum aspernatur aliquam quia veniam est possimus sapiente.",
+    "score": 3.33
+  },
+  {
+    "id": 3,
+    "title": "Laborious physical exercise",
+    "description": "Ut natus consequuntur molestiae impedit quas.",
+    "score": 4.4
+  },
+  {
+    "id": 4,
+    "title": "Debitis aut rerum necessitatibus",
+    "description": "Dolores ducimus et et hic vel qui excepturi. Nam libero tempore, cum soluta nobis est.",
+    "score": 4
+  },
+  {
+    "id": 5,
+    "title": "The wise man therefore always",
+    "description": "Dicta dolorum illum ratione. Et harum quidem rerum facilis est et expedita distinctio.",
+    "score": 5
+  }
+]

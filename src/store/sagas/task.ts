@@ -1,12 +1,17 @@
-import { call, put } from 'redux-saga/effects'
-import { getUserListRequest } from 'src/helpers/api';
+import { call, put, takeEvery } from 'redux-saga/effects'
+import { getTaskListRequest } from 'src/helpers/api';
+import { GET_TASK_LIST_PENDING, GET_TASK_LIST_REJECTED, GET_TASK_LIST_RESOLVED } from '../reducers/task';
 
-export function* fetchProducts() {
+function* getTaskList() {
   try {
-    yield put({ type: 'GET_USER_LIST_PENDING' });
-    const users = yield call(getUserListRequest as any, '/products');
-    yield put({ type: 'GET_USER_LIST_RESOLVED', users })
+    const users = yield call(getTaskListRequest);
+    console.log(users)
+    yield put({ type: GET_TASK_LIST_RESOLVED, users })
   } catch (e) {
-    yield put({ type: 'GET_USER_LIST_REJECTED', e })
+    yield put({ type: GET_TASK_LIST_REJECTED, e })
   }
+}
+
+export function* getTaskListPending() {
+  yield takeEvery(GET_TASK_LIST_PENDING, getTaskList)
 }
