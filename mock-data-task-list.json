@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Karlo",
+    "description": "Porro ipsum minima nisi dolores voluptatem hic quidem nam.",
+    "score": 4.5
+  },
+  {
+    "id": 2,
+    "title": "Nancy",
+    "description": "Illum aspernatur aliquam quia veniam est possimus sapiente.",
+    "score": 3.33
+  },
+  {
+    "id": 3,
+    "title": "Kevin",
+    "description": "Ut natus consequuntur molestiae impedit quas.",
+    "score": 4.4
+  },
+  {
+    "id": 4,
+    "title": "Clark",
+    "description": "Dolores ducimus et et hic vel qui excepturi.",
+    "score": 4
+  },
+  {
+    "id": 5,
+    "title": "Michel",
+    "description": "Dicta dolorum illum ratione.",
+    "score": 5
+  }
+]
