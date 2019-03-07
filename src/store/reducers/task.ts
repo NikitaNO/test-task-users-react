@@ -20,14 +20,13 @@ export default function tasks(state = initialState, action) {
       return {
         ...state,
         isLoading: false,
-        list: action.payload
+        list: action.tasks.data
       };
 
     case GET_TASK_LIST_REJECTED:
       return {
         ...state,
         isLoading: false,
-        list: action.payload
       };
 
     default:

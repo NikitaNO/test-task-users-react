@@ -3,12 +3,15 @@ import { useEffect } from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { getUserList } from '../../store/actions/user';
+import { getTaskList } from '../../store/actions/task';
 
 import Table from './Table';
 
-const UserTable: React.StatelessComponent<{ getUserList, users }> = (props) => {
+const UserTable: React.StatelessComponent<{ getUserList, getTaskList, users }> = (props) => {
   useEffect(() => {
-    props.getUserList()
+    props.getUserList();
+    props.getTaskList();
+    // in real life usually use joined action for few sources
   }, []);
 
   return <Table
@@ -17,6 +20,7 @@ const UserTable: React.StatelessComponent<{ getUserList, users }> = (props) => {
 
 const mapStateToProps = (state) => ({
   users: state.users.list,
+  tasks: state.tasks.list,
 });
 
 const enhance = compose(
@@ -24,6 +28,7 @@ const enhance = compose(
     mapStateToProps,
     {
       getUserList,
+      getTaskList,
     }
   )
 );

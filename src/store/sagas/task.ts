@@ -4,9 +4,8 @@ import { GET_TASK_LIST_PENDING, GET_TASK_LIST_REJECTED, GET_TASK_LIST_RESOLVED }
 
 function* getTaskList() {
   try {
-    const users = yield call(getTaskListRequest);
-    console.log(users)
-    yield put({ type: GET_TASK_LIST_RESOLVED, users })
+    const tasks = yield call(getTaskListRequest);
+    yield put({ type: GET_TASK_LIST_RESOLVED, tasks })
   } catch (e) {
     yield put({ type: GET_TASK_LIST_REJECTED, e })
   }

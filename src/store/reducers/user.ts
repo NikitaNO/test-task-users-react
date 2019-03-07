@@ -27,7 +27,6 @@ export default function users(state = initialState, action) {
       return {
         ...state,
         isLoading: false,
-        list: action.payload,
       };
 
     default:
