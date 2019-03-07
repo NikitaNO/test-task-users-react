@@ -7,7 +7,7 @@ import { getTaskList } from '../../store/actions/task';
 
 import Table from './Table';
 
-const UserTable: React.StatelessComponent<{ getUserList, getTaskList, users }> = (props) => {
+const UserTable: React.StatelessComponent<{ getUserList, getTaskList, users, tasks, isLoading }> = (props) => {
   useEffect(() => {
     props.getUserList();
     props.getTaskList();
@@ -15,12 +15,15 @@ const UserTable: React.StatelessComponent<{ getUserList, getTaskList, users }> =
   }, []);
 
   return <Table
+    isLoading={props.isLoading}
+    tasks={props.tasks}
     users={props.users} />
 };
 
 const mapStateToProps = (state) => ({
   users: state.users.list,
   tasks: state.tasks.list,
+  isLoading: state.users.isLoading || state.tasks.isLoading,
 });
 
 const enhance = compose(
